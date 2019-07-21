@@ -6,7 +6,7 @@ import { Place } from './place.model';
   providedIn: 'root'
 })
 export class PlacesService {
-  private _places: Place[] = [
+  private places: Place[] = [
     new Place(
       'p1',
       'Manhattan Mansion',
@@ -30,8 +30,12 @@ export class PlacesService {
     )
   ];
 
-  get places() {
-    return [...this._places];
+  getplaces(): Place[] {
+    return [...this.places];
+  }
+
+  getPlace(id: string): Place {
+    return {...this.places.find(p => p.id === id)};
   }
 
   constructor() {}

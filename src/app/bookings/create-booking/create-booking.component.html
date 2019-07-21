@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Create Booking</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onClose()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content text-center padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="8" offset-md="2">
+        <ion-img [src]="place.imageUrl"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-md="8" offset-md="2">
+        <h2>Booking for {{ place.title }}</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-md="8" offset-md="2">
+        <p>{{ place.description }}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-button 
+        expand="block"
+        color="primary"
+        (click)="onBookPlace()">
+        Book it!
+      </ion-button>
+    </ion-row>
+  </ion-grid>
+  
+
+</ion-content>
